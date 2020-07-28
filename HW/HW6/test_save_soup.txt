@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>BinCalc</title>
+<script src="bincalc.js" type="text/javascript"></script>
+<link href="bincalc.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="titlePanel">
+<span id="title">BinCalc</span><br/>
+<span id="subtitle">A Home for Twos Complement Lovers</span>
+</div>
+<div id="controlPanel">
+<div class="instructions">
+<pre>                       Type number,</pre>
+<pre>                       then hit enter:</pre>
+</div>
+  
+  Binary 1:
+  <!--<input type=text class=txtfld id=bin1 onkeypress="if (event.keyCode == 13) initBin123(1);" value="0">-->
+<input class="txtfld" id="bin1" onkeypress="if (event.keyCode == 13) initBin123(1);" type="text" value="0"/>
+<input class="button1" onclick="updateBin123('dec', 1)" type="button" value="Decimal"/>
+<input class="button1" onclick="updateBin123('bin', 1)" type="button" value="Binary"/>
+<input class="button1" onclick="updateBin123('neg', 1)" type="button" value="Negate"/>
+<input class="button1" onclick="updateBin123('abs', 1)" type="button" value="Abs Value"/>
+<input class="button1" onclick="updateBin123('clr', 1)" type="button" value="Clear"/><br/>
+<br/>
+<div id="operators">
+<input class="button2" onclick="updateBin3('add')" type="button" value="+"/>
+<input class="button2" onclick="updateBin3('sub')" type="button" value="-"/>
+<input class="button2" onclick="updateBin3('eq')" type="button" value="=="/>
+<input class="button2" onclick="updateBin3('ne')" type="button" value="!="/>
+<input class="button2" onclick="updateBin3('lt')" type="button" value="&lt;"/>
+<input class="button2" onclick="updateBin3('gt')" type="button" value="&gt;"/>
+<input class="button2" onclick="updateBin3('le')" type="button" value="&lt;="/>
+<input class="button2" onclick="updateBin3('ge')" type="button" value="&gt;="/><br/>
+</div>
+<br/>
+  
+  Binary 2:
+  <input class="txtfld" id="bin2" onkeypress="if (event.keyCode == 13) initBin123(2);" type="text" value="0"/>
+<input class="button1" onclick="updateBin123('dec', 2)" type="button" value="Decimal"/>
+<input class="button1" onclick="updateBin123('bin', 2)" type="button" value="Binary"/>
+<input class="button1" onclick="updateBin123('neg', 2)" type="button" value="Negate"/>
+<input class="button1" onclick="updateBin123('abs', 2)" type="button" value="Abs Value"/>
+<input class="button1" onclick="updateBin123('clr', 2)" type="button" value="Clear"/><br/>
+<div class="instructions">
+<pre>               -----------------------------</pre>
+</div>
+
+  Result:   
+  <input class="txtfld2" id="bin3" onkeypress="if (event.keyCode == 13) initBin123(3);" type="text" value="0"/>
+<input class="button1" onclick="updateBin123('dec', 3)" type="button" value="Decimal"/>
+<input class="button1" onclick="updateBin123('bin', 3)" type="button" value="Binary"/>
+<input class="button1" onclick="updateBin123('neg', 3)" type="button" value="Negate"/>
+<input class="button1" onclick="updateBin123('abs', 3)" type="button" value="Abs Value"/>
+<input class="button1" onclick="updateBin123('clr', 3)" type="button" value="Clear"/><br/>
+<br/>
+<div id="messages"></div>
+</div>
+</body>
+</html>
